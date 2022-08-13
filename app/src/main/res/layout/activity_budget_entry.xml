@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BudgetEntry">
+
+    <TextView
+        android:id="@+id/txt_BudgetEntryHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/new_budget_header"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/eTxt_BudgetName"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="30dp"
+        android:digits="@string/txt_filter"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/budget_name"
+        android:inputType="text"
+        android:maxLength="25"
+        app:layout_constraintBottom_toTopOf="@+id/eTxt_BudgetAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_BudgetRoleOver" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_BudgetImagePick"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTxt_BudgetAmount">
+
+        <Button
+            android:id="@+id/btn_BudgetImagePick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:text="@string/budget_img_pick" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_BudgetEntryIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:srcCompat="@android:drawable/ic_dialog_info" />
+
+            <TextView
+                android:id="@+id/tv_budgetCatName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:hint="Budget" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/eTxt_BudgetAmount"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="55dp"
+        android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+        android:ems="10"
+        android:hint="@string/goal_target"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg_BudgetRoleOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="27dp"
+        android:checkedButton="@id/radioButton_BudgetMonthly"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/txt_BudgetEntryHeader"
+        app:layout_constraintTop_toBottomOf="@+id/txt_BudgetEntryHeader">
+
+        <RadioButton
+            android:id="@+id/radioButton_BudgetMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/budget_monthly"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_BudgetWeekly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/budget_weekly"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_BudgetDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/cancel_data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_BudgetSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/save_data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

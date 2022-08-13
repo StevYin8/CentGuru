@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/goal_txt_EndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="12dp"
+        android:text="Show End Date"
+        app:layout_constraintStart_toStartOf="@+id/goal_dd_budget3"
+        app:layout_constraintTop_toBottomOf="@+id/goal_dd_budget3" />
+
+    <TextView
+        android:id="@+id/goal_graphic2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Transacton Trending"
+        app:layout_constraintBottom_toTopOf="@+id/goal_lineChart"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/goal_txtDataEntryHeader2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Goal"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/goal_dd_budget3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="33dp"
+        android:hint=" eg: food"
+        android:inputType="text"
+        android:digits="@string/txt_filter"
+        android:maxLength="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/goal_dd_budget2"
+        app:layout_constraintTop_toBottomOf="@+id/goal_txtDataEntryHeader2" />
+
+    <TextView
+        android:id="@+id/goal_txt_StartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Show Start Date"
+        app:layout_constraintStart_toStartOf="@+id/goal_dd_budget2"
+        app:layout_constraintTop_toBottomOf="@+id/goal_dd_budget2" />
+
+
+    <Button
+        android:id="@+id/goal_btn_EndDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="27dp"
+        android:text="End"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/goal_btn_StartDate"
+        app:layout_constraintTop_toBottomOf="@+id/goal_txt_EndDate" />
+
+    <Spinner
+        android:id="@+id/goal_dd_budget2"
+        android:layout_width="142dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="54dp"
+        android:hint=" Category"
+        android:inputType="none"
+        app:layout_constraintEnd_toStartOf="@+id/goal_dd_budget3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_txtDataEntryHeader2"
+        />
+
+    <Button
+        android:id="@+id/goal_btn_StartDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="52dp"
+        android:text="start"
+        app:layout_constraintEnd_toStartOf="@+id/goal_btn_EndDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_txt_StartDate" />
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/goal_lineChart"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_SignInHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="@string/sign_in"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/user_name_entry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_EnterLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="167dp"
+        android:text="@string/enter"
+        app:layout_constraintBottom_toTopOf="@+id/txt_NewHere"
+        app:layout_constraintStart_toStartOf="@+id/txt_forgot_password"
+        app:layout_constraintTop_toBottomOf="@+id/txt_forgot_password" />
+
+    <TextView
+        android:id="@+id/txt_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        android:text="@string/forgot_password"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/btn_EnterLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTxtNumberPassword" />
+
+    <TextView
+        android:id="@+id/txt_NewHere"
+        android:layout_width="246dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/new_here"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_new_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_EnterLogin" />
+
+    <Button
+        android:id="@+id/btn_new_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_NewHere"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="99dp"
+        android:text="@string/new_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_NewHere" />
+
+    <EditText
+        android:id="@+id/eTxtNumberPassword"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/btn_EnterLogin"
+        android:layout_marginHorizontal="10dp"
+
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="numberPassword"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_forgot_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_name_entry" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_name_entry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/eTxtNumberPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_SignInHeader">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_name_entry_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/txt_filter"
+            android:hint="@string/user_name"
+            android:inputType="text"
+            android:maxLength="30" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

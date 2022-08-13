@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GoalEntry">
+
+    <TextView
+        android:id="@+id/txt_GoalEntryHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="37dp"
+        android:text="@string/new_goal_header"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/eTxt_GoalName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_GoalImagePick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="269dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_GoalImagePick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:text="@string/budget_img_pick" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_GoalEntryIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:srcCompat="@android:drawable/ic_dialog_info" />
+
+            <TextView
+                android:id="@+id/tv_GoalEntry_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:hint="Goal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_TargetDatePick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/target_date"
+        app:layout_constraintBottom_toTopOf="@+id/layout_GoalImagePick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_ShowTargetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:hint="Goal Date"
+        app:layout_constraintBottom_toTopOf="@+id/btn_TargetDatePick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/eTxt_GoalName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:digits="@string/txt_filter"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/name_goal"
+        android:inputType="text"
+        android:maxLength="25"
+        app:layout_constraintBottom_toTopOf="@+id/eTxt_GoalAmount"
+        app:layout_constraintEnd_toEndOf="@+id/eTxt_GoalAmount"
+        app:layout_constraintStart_toStartOf="@+id/eTxt_GoalAmount"
+        app:layout_constraintTop_toBottomOf="@+id/txt_GoalEntryHeader" />
+
+    <EditText
+        android:id="@+id/eTxt_GoalNotes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="497dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/notes"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTxt_GoalAmount" />
+
+    <EditText
+        android:id="@+id/eTxt_GoalAmount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+        android:ems="10"
+        android:hint="@string/goal_target"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/eTxt_GoalNotes"
+        app:layout_constraintEnd_toEndOf="@+id/eTxt_GoalNotes"
+        app:layout_constraintStart_toStartOf="@+id/eTxt_GoalNotes"
+        app:layout_constraintTop_toBottomOf="@+id/eTxt_GoalName" />
+
+    <Button
+        android:id="@+id/btn_GoalSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/save_data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_GoalDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/cancel_data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

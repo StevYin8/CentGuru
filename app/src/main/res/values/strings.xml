@@ -1,0 +1,211 @@
+<resources>
+    <string name="app_name">Centguru</string>
+
+    //Action Bars
+    <string name="action_user">User Page</string>
+
+    //InputValidation
+    <string name="txt_filter">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz @#$_-!0123456789</string>
+
+    <string name="txt_filter_email">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@!#$%&amp;\'*+-/=?^_`{|.0123456789</string>
+
+    //Sign in Page*****************************************
+    <string name="sign_in">Sign In</string>
+
+    <string name="user_name">User Name</string>
+
+    <string name="password">Password</string>
+
+    <string name="new_account">New Account</string>
+
+    <string name="forgot_password">Forgot Password?</string>
+
+    <string name="enter">Enter</string>
+
+    <string name="new_here">New here? Welcome! Create a new account.</string>
+
+
+    //Register Page*****************************************
+    <string name="reg_forgot_password">*Answer some security questions (in case you ever forget your password.)</string>
+
+    <string name="reg_tag_username">*User Name: </string>
+
+    <string name="reg_hint_username">Choose a Username</string>
+
+    <string name="reg_tag_password">*Passcode: </string>
+
+    <string name="reg_hint_password">Choose a Passcode</string>
+
+    <string name="reg_tag_password_re">*Passcode: </string>
+
+    <string name="reg_hint_password_re">Reenter Passcode</string>
+
+    <string name="reg_tag_email">Email: </string>
+
+    <string name="reg_hint_email">Link an email if you want</string>
+
+    <string name="reg_submit_btn">REGISTER</string>
+
+
+
+    //Account Edit Page*****************************************
+    <string name="account_forgot_password">*Security Questions</string>
+
+    <string name="account_Security_Questions_hint">(You can retrieve your password by answering the security question) </string>
+
+
+    <string name="account_tag_username">*User Name: </string>
+
+    <string name="account_hint_username">Choose a Username</string>
+
+    <string name="account_tag_password">*Passcode: </string>
+
+    <string name="account_hint_password">Choose a Passcode</string>
+
+    <string name="account_tag_password_re">*Passcode: </string>
+
+    <string name="account_hint_password_re">Reenter Passcode</string>
+
+    <string name="account_tag_email">Email: </string>
+
+    <string name="account_hint_email">Link an email if you want</string>
+
+    <string name="account_submit_btn">SAVE</string>
+
+    //Forgot Password Page*****************************************
+    <string name="forgot_password_header">Forgot Your Password?</string>
+
+    <string name="forgot_password_answer_questions">Answer three security questions, and click submit.</string>
+
+    <string name="forgot_password_reset">Remember to reset your password from your User Profile!</string>
+
+    <string name="forgot_password_submit">SUBMIT</string>
+
+
+    //User Home Page**************************************************
+    <string name="user_hide_goals_sw">Hide Inactive Goals </string>
+
+    <string name="user_edit_account">Edit Account</string>
+
+    <string name="user_badge_header">Achievement Badges</string>
+
+    <string name="user_badge_info">(When you earn an Achievement Badge, it will loose it\'s shading.)</string>
+
+    //Transaction Entry Page*****************************************
+    <string name="new_transaction_header">What\'s the Latest?</string>
+
+    <string name="transaction_type">Tell us about it: </string>
+
+    <string name="transaction_spend">Spending</string>
+
+    <string name="transaction_save">Saving</string>
+
+    <string name="connect_to_goal">Connect to a goal: </string>
+
+    <string name="date">When?</string>
+
+    <string name="connect_to_budget">Connect to a budget: </string>
+
+    <string name="amount">How much? </string>
+
+    <string name="notes">Have extra notes? Put them here!</string>
+
+    <string name="save_data">SAVE</string>
+
+    <string name="cancel_data">CANCEL</string>
+
+    <string name="delete_data">DELETE</string>
+
+
+    //Transaction Edit Page*****************************************
+    <string name="edit_transaction_header">Your Transaction</string>
+
+    <string name="edit_transaction_type">Tell us about it: </string>
+
+    <string name="edit_connect_to_goal">Connect to a goal: </string>
+
+    <string name="edit_date">When?</string>
+
+    <string name="edit_connect_to_budget">Connect to a budget: </string>
+
+    <string name="edit_amount">How much? </string>
+
+    <string name="edit_notes">Have extra notes? Put them here!</string>
+
+
+    //Goal Entry Page*****************************************
+    <string name="new_goal_header">What\'s your Goal?</string>
+
+    <string name="name_goal">Name your goal </string>
+
+    <string name="target_date">When do you want it?</string>
+
+    <string name="goal_target">What\'s your target? </string>
+
+
+    //Goal Edit Page*****************************************
+    <string name="edit_goal_header">Your Goal</string>
+
+    <string name="edit_name_goal">Name your goal </string>
+
+    <string name="edit_target_date">When do you want it?</string>
+
+    <string name="edit_goal_target">What\'s your target? </string>
+
+    <string name="goal_active">Mark Goal As Inactive</string>
+
+    //Goal Card**********************************************************
+    <string name="goal_date">Target Date</string>
+
+    //Main Activity 2 Fragments
+    <string name="new_goal">New Goal</string>
+
+    <string name="new_transaction">New Transaction</string>
+
+    <string name="new_budget">New Budget</string>
+
+    //Main Activity 2 Menue
+    <string name="menue_transaction">Transactions</string>
+
+    <string name="menue_goal">Goals</string>
+
+    <string name="menue_budget">Budgets</string>
+
+
+    //Budget Entry Page*****************************************
+    <string name="new_budget_header">What\'s your Budget?</string>
+
+    <string name="pick_budget">Choose a budget </string>
+
+    <string name="budget_name">Budget Name</string>
+
+    <string name="role_over_period">How often should it roll over?</string>
+
+    <string name="budget_limit">What\'s your limit? </string>
+
+    <string name="budget_weekly">Weekly</string>
+
+    <string name="budget_monthly">Monthly</string>
+
+    <string name="budget_img_pick">Icon</string>
+
+    //Budget Card*****************************************
+    <string name="budget_end_txt">Rolls Over: </string>
+
+
+    //Budget Edit Page*****************************************
+    <string name="new_budget_edit_header">Your Budget</string>
+
+    <string name="budget_edit_name">Budget Name</string>
+
+    <string name="budget_edit_limit">What\'s your limit? </string>
+
+
+    //Analysis Page*****************************************
+    <string name="analysis_header">Analysis</string>
+
+    //Image Picker Pop Up*****************************************
+    <string name="image_pick_header">Icons</string>
+
+
+</resources>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionEntry">
+
+    <TextView
+        android:id="@+id/txt_TransactionEntryHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/new_transaction_header"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <RadioGroup
+        android:id="@+id/rg_TransactionType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="127dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_TransactionEntryHeader">
+
+        <RadioButton
+            android:id="@+id/rb_TransactionSpending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_spend"
+            android:checked="true"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <RadioButton
+            android:id="@+id/rb_TransactionSaving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_save"
+            tools:layout_editor_absoluteX="175dp"
+            tools:layout_editor_absoluteY="120dp" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/dd_goal"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_TransactionType"/>
+
+
+    <Spinner
+        android:id="@+id/dd_budget"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dd_goal"
+        />
+
+
+
+
+    <Button
+        android:id="@+id/btn_DatePick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="@string/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dd_budget" />
+
+    <TextView
+        android:id="@+id/txt_ShowDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_DatePick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_DatePick"
+        app:layout_constraintTop_toTopOf="@+id/btn_DatePick" />
+
+    <EditText
+        android:id="@+id/eTxt_Amount"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/amount"
+        android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_DatePick" />
+
+    <EditText
+        android:id="@+id/eTxt_Notes"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:hint="@string/notes"
+        android:gravity="start|top"
+        android:inputType="text"
+        android:digits="@string/txt_filter"
+        android:maxLength="75"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTxt_Amount" />
+
+
+    <Button
+        android:id="@+id/btn_Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/save_data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_TransEntry_Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/cancel_data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

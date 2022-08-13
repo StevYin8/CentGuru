@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mm_Transaction"
+        android:title="@string/menue_transaction"
+        android:icon="@drawable/ic_baseline_attach_money_24_blue"/>
+    <item
+        android:id="@+id/mm_Goal"
+        android:title="@string/menue_goal"
+        android:icon="@drawable/ic_baseline_account_balance_24_blue"/>
+    <item
+        android:id="@+id/mm_Budget"
+        android:title="@string/menue_budget"
+        android:icon="@drawable/ic_baseline_account_balance_wallet_24_blue"/>
+</menu>
